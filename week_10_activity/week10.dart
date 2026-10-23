@@ -1,21 +1,17 @@
-// Base class
 class Vehicle {
   String name;
   Vehicle(this.name);
   String describe() => "$name is a vehicle.";
 }
 
-// Abstract class
 abstract class Drivable {
   void drive();
 }
 
-// Mixin
 mixin Honkable {
   void honk() => print("Beep!");
 }
 
-// Derived classes
 class Car extends Vehicle implements Drivable {
   Car(String name) : super(name);
   @override
@@ -32,7 +28,6 @@ class Truck extends Vehicle implements Drivable {
   void drive() => print("$name drives slow.");
 }
 
-// Mixin used outside the chain
 class Bicycle with Honkable {}
 
 void main() {
